@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Lyndon_Liu\.nuget\packages\nlog.config\4.7.9\contentFiles\any\any\NLog.config" />
+    <None Remove="C:\Users\Lyndon_Liu\.nuget\packages\nlog.schema\4.7.9\contentFiles\any\any\NLog.xsd" />
+    <None Remove="Resources\1.Creat table.sql" />
+    <None Remove="Resources\2.Add BussinessDate.sql" />
+    <None Remove="Resources\3.Alter BusinessDate.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\3.Alter BusinessDate.sql" />
+    <Content Include="Resources\2.Add BussinessDate.sql" />
+    <Content Include="Resources\1.Creat table.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.90" />
+    <PackageReference Include="NLog" Version="4.7.10" />
+    <PackageReference Include="NLog.Schema" Version="4.7.10" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.13.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Nlog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+</Project>

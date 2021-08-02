@@ -1,0 +1,1 @@
+﻿ALTER table [T_movieSessions] add [BusinessDate] Date
