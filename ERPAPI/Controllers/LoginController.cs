@@ -96,7 +96,6 @@ namespace ERPAPI.Controllers
             {
                 _logger.LogInformation($"Start:{data.Username}/{data.Password}");
 
-
                 if (!String.IsNullOrEmpty(data.Password))
                 {
                     // Consuming ASMX Web Services in ASP.NET Core
@@ -144,8 +143,6 @@ namespace ERPAPI.Controllers
                         BadMessage = rs.Body.LoginByUserResult;
                     }
 #if fa
-
-
                     _logger.LogInformation($"Start {tblUserInfo.cUser_ID}");
 
                     if (string.IsNullOrEmpty(rs))
